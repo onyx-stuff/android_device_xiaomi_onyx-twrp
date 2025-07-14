@@ -135,6 +135,7 @@ TW_CUSTOM_CPU_TEMP_PATH := "/sys/class/thermal/thermal_zone45/temp" # CPU-0-0-0
 TW_EXCLUDE_APEX := true
 TW_EXCLUDE_DEFAULT_USB_INIT := true
 TW_EXTRA_LANGUAGES := true
+TW_LOAD_VENDOR_MODULES := "adsp_loader_dlkm.ko gpr_dlkm.ko q6_notifier_dlkm.ko q6_pdr_dlkm.ko snd_event_dlkm.ko spf_core_dlkm.ko"
 TW_LOAD_VENDOR_MODULES_EXCLUDE_GKI := true
 TW_USE_SERIALNO_PROPERTY_FOR_DEVICE_ID := true
 TW_USE_TOOLBOX := true
