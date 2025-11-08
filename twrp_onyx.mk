@@ -26,3 +26,6 @@ TARGET_OTA_ASSERT_DEVICE := onyx
 TW_STATUS_ICONS_ALIGN := center
 #TW_Y_OFFSET := 99
 #TW_H_OFFSET := -99
+
+# Strongbox Device Decryption
+TW_INCLUDE_OMAPI := true
