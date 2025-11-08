@@ -38,8 +38,8 @@ if [ "$FOX_BUILD_DEVICE" = "$FDEVICE" ]; then
 	echo "Detected build device: $FOX_BUILD_DEVICE"
 
 # Review build flags with below links:
-# https://gitlab.com/OrangeFox/vendor/recovery/-/raw/fox_12.1/orangefox_build_vars.txt
-# https://gitlab.com/OrangeFox/bootable/Recovery/-/raw/fox_12.1/orangefox.mk
+# https://gitlab.com/OrangeFox/vendor/recovery/-/raw/fox_14.1/orangefox_build_vars.txt
+# https://gitlab.com/OrangeFox/bootable/Recovery/-/raw/fox_14.1/orangefox.mk
 	export FOX_VIRTUAL_AB_DEVICE=1
 	export FOX_VANILLA_BUILD=1
 	export FOX_RECOVERY_SYSTEM_PARTITION="/dev/block/mapper/system"
@@ -49,6 +49,7 @@ if [ "$FOX_BUILD_DEVICE" = "$FDEVICE" ]; then
 	export FOX_DELETE_AROMAFM=1
 	export FOX_REMOVE_AAPT=1
 	export FOX_DELETE_MAGISK_ADDON=1
+	export FOX_VARIANT="auto-dfe"
 else
 	echo "I: vendorsetup.sh skipped; device mismatch or environment issue."
 fi
