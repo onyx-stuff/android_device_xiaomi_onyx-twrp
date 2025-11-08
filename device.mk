@@ -4,7 +4,7 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
-DEVICE_PATH := device/xiaomi/peridot
+DEVICE_PATH := device/xiaomi/onyx
 
 # Configure base.mk
 $(call inherit-product, $(SRC_TARGET_DIR)/product/base.mk)
@@ -25,17 +25,17 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/emulated_storage.mk)
 $(call inherit-product, vendor/twrp/config/common.mk)
 
 # some OrangeFox-specific settings
-$(call inherit-product, $(DEVICE_PATH)/fox_peridot.mk)
+$(call inherit-product, $(DEVICE_PATH)/fox_onyx.mk)
 
 PRODUCT_PACKAGES += \
-    bootctrl.xiaomi_sm8550.recovery \
+    bootctrl.xiaomi_sm8735.recovery \
     android.hardware.boot@1.2-impl-qti.recovery
 
 # SHIPPING API
-PRODUCT_SHIPPING_API_LEVEL := 31
+PRODUCT_SHIPPING_API_LEVEL := 32
 
 # VNDK API
-PRODUCT_TARGET_VNDK_VERSION := 33
+PRODUCT_TARGET_VNDK_VERSION := 35
 
 # Dynamic partitions
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
