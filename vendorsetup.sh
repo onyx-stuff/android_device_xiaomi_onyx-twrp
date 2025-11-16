@@ -49,7 +49,7 @@ if [ "$FOX_BUILD_DEVICE" = "$FDEVICE" ]; then
 	export FOX_DELETE_AROMAFM=1
 	export FOX_REMOVE_AAPT=1
 	export FOX_DELETE_MAGISK_ADDON=1
-	export FOX_VARIANT="auto-dfe"
+	export FOX_VARIANT="crypto"
 else
 	echo "I: vendorsetup.sh skipped; device mismatch or environment issue."
 fi
