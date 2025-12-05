@@ -82,15 +82,6 @@ void vendor_load_properties() {
   property_override("ro.build.date.utc", "1672502400");
   const std::string sku = GetProperty("ro.boot.hardware.sku", "");
 
-  if (sku == "dada") {
-    model_property_override("dada", "dada", "Xiaomi 15");
-  } else if (sku == "haotian") {
-    model_property_override("haotian", "haotian", "Xiaomi 15 Pro");
-  } else if (sku == "onyx") {
-    model_property_override("onyx", "onyx", "POCO F7");
-  } else if (sku == "xuanyuan") {
-    model_property_override("xuanyuan", "xuanyuan", "Xiaomi 15 Ultra");
-  } else {
-    LOG(ERROR) << "Unknown sku: " << sku;
-  }
+  // Set model properties for Onyx only
+  model_property_override("onyx", "onyx", "POCO F7");
 }
